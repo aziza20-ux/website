@@ -1,0 +1,293 @@
+body{
+font-family: Arial;
+margin:0;
+line-height:1.6;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+header{
+background:#89afd3;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+/* LOGO */
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:45px;
+}
+
+.logo span{
+font-size:20px;
+font-weight:bold;
+}
+
+/* NAVIGATION */
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+border-bottom:2px solid white;
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7');
+background-size:cover;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero-logo{
+width:120px;
+margin-bottom:20px;
+}
+
+/* SECTIONS */
+
+.section{
+padding:60px 40px;
+text-align:center;
+}
+
+.gray{
+background:#f4f4f4;
+}
+
+/* SERVICES */
+
+.services{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.service-card{
+background:white;
+padding:15px;
+border-radius:10px;
+width:260px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.service-img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+/* TEAM */
+
+.team{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.member{
+transition:transform 0.3s;
+}
+
+.member:hover{
+transform:translateY(-6px);
+}
+
+.member img{
+border-radius:50%;
+}
+
+/* CLIENTS */
+
+.recommendations{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.rec{
+background:white;
+padding:25px;
+width:260px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:transform 0.3s;
+}
+
+.rec:hover{
+transform:scale(1.05);
+}
+
+.client-logo{
+width:60px;
+margin-bottom:10px;
+}
+
+/* MAP */
+
+iframe{
+width:80%;
+height:300px;
+border:0;
+}
+
+/* FORM */
+
+form{
+display:flex;
+flex-direction:column;
+width:300px;
+margin:auto;
+gap:10px;
+}
+
+input, textarea{
+padding:10px;
+border:1px solid #ccc;
+}
+
+button{
+background:#0a4c8a;
+color:white;
+border:none;
+padding:12px;
+cursor:pointer;
+}
+
+button:hover{
+background:#06325e;
+}
+
+/* FOOTER */
+
+footer{
+background:#96b7d6;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* BURGER MENU */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+/* MOBILE STYLES */
+
+@media (max-width: 768px){
+
+header{
+padding:15px 20px;
+}
+
+/* NAVIGATION */
+
+nav{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#89afd3;
+display:flex;
+flex-direction:column;
+align-items:center;
+max-height:0;
+overflow:hidden;
+transition:max-height 0.4s ease;
+}
+
+nav a{
+margin:15px 0;
+}
+
+nav.active{
+max-height:300px;
+}
+
+/* SHOW BURGER */
+
+.menu-toggle{
+display:block;
+}
+
+/* SERVICES */
+
+.services{
+flex-direction:column;
+align-items:center;
+}
+
+/* TEAM */
+
+.team{
+flex-direction:column;
+align-items:center;
+}
+
+/* CLIENTS */
+
+.recommendations{
+flex-direction:column;
+align-items:center;
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+}
+
+/* FORM */
+
+form{
+width:90%;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 20px;
+}
+
+.hero-logo{
+width:90px;
+}
+
+}
