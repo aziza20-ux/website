@@ -6,6 +6,7 @@ const EMAILJS_SDK_URL = "https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.m
 const EMAILJS_PUBLIC_KEY = "WwI5nYrI5ZDYRPm4i";
 const EMAILJS_SERVICE_ID = "service_g5q2env";
 const EMAILJS_TEMPLATE_ID = "template_96rsnfj";
+const EMAILJS_AUTOREPLY_TEMPLATE_ID = "template_wqa6k5t";
 const MIN_FILL_TIME_MS = 4000;
 const SUBMIT_COOLDOWN_MS = 60000;
 const LAST_SUBMIT_STORAGE_KEY = "contact_form_last_submit_ts";
@@ -117,6 +118,12 @@ if (contactForm) {
 			await loadEmailJsSdk();
 			initEmailJs();
 			await window.emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this);
+			const userEmail = this.querySelector("input[name='email']").value;
+			const userName = this.querySelector("input[name='name']").value;
+			await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_AUTOREPLY_TEMPLATE_ID, {
+				to_email: userEmail,
+				user_name: userName
+			});
 			window.localStorage.setItem(LAST_SUBMIT_STORAGE_KEY, String(Date.now()));
 			this.reset();
 			if (startedAtInput) {
