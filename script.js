@@ -118,6 +118,7 @@ if (contactForm) {
 			initEmailJs();
 			await window.emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this);
 			window.localStorage.setItem(LAST_SUBMIT_STORAGE_KEY, String(Date.now()));
+			this.reset();
 			if (startedAtInput) {
 				startedAtInput.value = String(Date.now());
 			}
