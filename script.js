@@ -3,13 +3,17 @@ const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav");
 const reveals = document.querySelectorAll(".reveal");
 
-if (contactForm) {
-	contactForm.addEventListener("submit", (e) => {
-		e.preventDefault();
-		alert("Thank you for contacting Blessed Plumbing. We will respond soon!");
-		contactForm.reset();
-	});
-}
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_g5q2env", "template_96rsnfj", this)
+    .then(function() {
+      alert("✅ Message sent successfully!");
+    }, function(error) {
+      alert("❌ Failed to send message");
+      console.log(error);
+    });
+});
 
 if (toggle && nav) {
 	toggle.addEventListener("click", () => {
@@ -42,3 +46,4 @@ if ("IntersectionObserver" in window) {
 } else {
 	reveals.forEach((section) => section.classList.add("visible"));
 }
+

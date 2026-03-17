@@ -154,9 +154,9 @@
 			</div>
 
 			<form id="contactForm">
-				<input type="text" placeholder="Your Name" required>
-				<input type="email" placeholder="Your Email" required>
-				<textarea placeholder="Your Message"></textarea>
+				<input type="text" name="name" placeholder="Your Name" required>
+				<input type="email" name="email" placeholder="Your Email" required>
+				<textarea name="message" placeholder="Your Message"></textarea>
 				<button type="submit">Send Message</button>
 			</form>
 		</section>
@@ -167,5 +167,11 @@
 	</footer>
 
 	<script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+	<script>
+(function(){
+  emailjs.init("WwI5nYrI5ZDYRPm4i"); // from EmailJS dashboard
+})();
+</script>
 </body>
 </html>
