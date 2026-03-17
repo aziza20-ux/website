@@ -1,19 +1,31 @@
-const contactForm = document.getElementById("contactForm");
 const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav");
 const reveals = document.querySelectorAll(".reveal");
+const contactForm = document.getElementById("contact-form");
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+if (window.emailjs) {
+	window.emailjs.init("WwI5nYrI5ZDYRPm4i");
+}
 
-  emailjs.sendForm("service_g5q2env", "template_96rsnfj", this)
-    .then(function() {
-      alert("✅ Message sent successfully!");
-    }, function(error) {
-      alert("❌ Failed to send message");
-      console.log(error);
-    });
-});
+if (contactForm) {
+	contactForm.addEventListener("submit", function (e) {
+		e.preventDefault();
+
+		if (!window.emailjs) {
+			alert("Email service is still loading. Please try again in a few seconds.");
+			return;
+		}
+
+		window.emailjs.sendForm("service_g5q2env", "template_96rsnfj", this)
+			.then(function () {
+				alert("Message sent successfully!");
+			})
+			.catch(function (error) {
+				alert("Failed to send message");
+				console.error(error);
+			});
+	});
+}
 
 if (toggle && nav) {
 	toggle.addEventListener("click", () => {
