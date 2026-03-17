@@ -131,7 +131,7 @@ nav a:hover {
 	padding: 130px 20px 90px;
 	background:
 		linear-gradient(120deg, rgba(7, 40, 50, 0.78), rgba(15, 82, 96, 0.52)),
-		url("https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1800&q=80") center/cover;
+		url("images/tallbuilding.jpeg") center/cover;
 }
 
 .hero-content {
