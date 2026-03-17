@@ -121,8 +121,8 @@ if (contactForm) {
 			const userEmail = this.querySelector("input[name='email']").value;
 			const userName = this.querySelector("input[name='name']").value;
 			await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_AUTOREPLY_TEMPLATE_ID, {
-				to_email: userEmail,
-				user_name: userName
+				email: userEmail,
+				name: userName
 			});
 			window.localStorage.setItem(LAST_SUBMIT_STORAGE_KEY, String(Date.now()));
 			this.reset();
