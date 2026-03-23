@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.blessedplumbers.com/sitemap.xml
+Sitemap: https://blessedplumbers.com/sitemap.xml
