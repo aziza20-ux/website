@@ -1,0 +1,9 @@
+User-agent: *
+allow:/
+
+Sitemap: https://www.blessedplumbers.com/sitemap.xml
+Host: https://www.blessedplumbers.com
+
+# Notes:
+# - Allows all crawlers to access the site.
+# - Points to the canonical sitemap for indexing.
