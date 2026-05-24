@@ -405,7 +405,7 @@ section {
 /* Service Page Hero Variation */
 .service-hero {
     background-color: var(--primary-light);
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
     text-align: center;
 }
 
