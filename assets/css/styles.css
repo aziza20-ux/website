@@ -164,7 +164,7 @@ section {
 .nav-logo-text {
     font-weight: 700;
     font-size: 1.25rem;
-    color: var(--primary-dark);
+    color: #000000;
     line-height: 1.2;
 }
 
@@ -180,7 +180,7 @@ section {
 
 .nav-link {
     font-weight: 500;
-    color: var(--text-main);
+    color: #000000;
     padding: 0.5rem 0;
     position: relative;
 }
@@ -203,7 +203,7 @@ section {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary);
+    color: #000000;
 }
 
 .nav-cta {
@@ -220,7 +220,7 @@ section {
 .mobile-menu-toggle {
     display: none;
     font-size: 1.5rem;
-    color: var(--primary-dark);
+    color: #000000;
 }
 
 @media (max-width: 991px) {
@@ -409,9 +409,32 @@ section {
     text-align: center;
 }
 
+.service-hero .hero-content {
+    color: #000000;
+    text-shadow: none;
+}
+
 .service-hero .hero-title {
     font-size: 3rem;
     margin-bottom: var(--spacing-xs);
+    color: #000000;
+}
+
+.service-hero .hero-title span {
+    color: #ff6b00;;
+}
+
+.service-hero .hero-subtitle {
+    color: #000000;
+}
+
+.service-hero .hero-buttons .btn-secondary {
+    color: #000000;
+    border-color: #000000;
+}
+
+.service-hero .hero-buttons .btn-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.06);
 }
 
 .service-hero-media {
